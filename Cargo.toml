@@ -1,7 +1,11 @@
 [package]
 name = "adv-code-2025"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
+
+[features]
+default = []
+tracing = ["code-timing-macros/tracing", "dep:tracing"]
 
 [dependencies]
 anyhow = "1.0.100"
@@ -11,3 +15,4 @@ const_format = "0.2.35"
 # Additional recommended dependencies
 itertools = "0.14.0"
 regex = "1.12.2"
+tracing = { version = "0.1.43", optional = true }
